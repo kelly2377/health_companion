@@ -1,0 +1,8 @@
+import axios from "axios"
+
+const API = "http://YOUR_LOCAL_IP:3000"
+
+export const analyzeLabs = async (labs) => {
+  const res = await axios.post(`${API}/analyze-labs`, { labs })
+  return res.data
+}
